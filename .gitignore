@@ -1,0 +1,4 @@
+dist/
+node_modules/
+sample-darwin-x64/
+sample-win32-x64/
