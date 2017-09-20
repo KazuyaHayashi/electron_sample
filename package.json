@@ -10,12 +10,14 @@
     "electron-squirrel-startup": "^1.0.0"
   },
   "devDependencies": {
-    "7zip-bin-osx": "^1.0.0",
-    "appdmg": "^0.4.5",
     "electron": "^1.7.6",
     "electron-builder": "^19.27.7",
     "electron-packager": "^9.1.0",
     "electron-builder-squirrel-windows": "^19.28.3"
+  },
+  "optionalDependencies": {
+    "7zip-bin-osx": "^1.0.0",
+    "appdmg": "^0.4.5"
   },
   "scripts": {
     "dev": "electron . --enable-logging",
