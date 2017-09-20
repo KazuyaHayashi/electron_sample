@@ -31,13 +31,16 @@ jobs:
       - run: yarn install
       - run: npm run build:win
 
+      - store_artifacts:
+          path: ~/repo/dist
+
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests!
-      - run: yarn test
+      #- run: yarn test
 
 
 
