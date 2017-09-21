@@ -28,21 +28,14 @@ dependencies:
     - echo 'export HOMEBREW_CASK_OPTS="--caskroom=$HOME/.homebrew/Caskroom --appdir=$HOME/Applications"' >>~/.bashrc
     - . ~/.bashrc
     - |
-      if [ ! -d ~/.homebrew ]; then
-        mkdir -p ~/.homebrew
-        curl -L https://github.com/Homebrew/homebrew/tarball/master | tar xz --strip 1 -C ~/.homebrew
-        brew update
-        #brew cask install xquartz
-        brew install --debug --verbose wine
-        brew install --debug --verbose mono
-      fi
+      brew install npm
 
   cache_directories:
     - ~/.homebrew
 
 test:
   override:
-    - npm run build:
+    - npm run build_osx:
         timeout: 600
   post:
     - mv dist $CIRCLE_ARTIFACTS
