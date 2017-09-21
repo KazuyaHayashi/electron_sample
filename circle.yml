@@ -29,6 +29,7 @@ dependencies:
     - . ~/.bashrc
     - |
       brew install npm
+      npm install -g npm@5.4.1
 
   cache_directories:
     - ~/.homebrew
