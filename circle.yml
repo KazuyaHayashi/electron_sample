@@ -29,7 +29,7 @@ dependencies:
     - . ~/.bashrc
     - brew cask reinstall xquartz
     - brew install wine mono
-    - brew install npm
+    - brew upgrade npm
     - npm install -g npm@5.4.1
 
   cache_directories:
