@@ -27,7 +27,7 @@ dependencies:
     - echo 'export PATH=$HOME/.homebrew/bin:$HOME/.awscli/bin:$PATH' >>~/.bashrc
     - echo 'export HOMEBREW_CASK_OPTS="--caskroom=$HOME/.homebrew/Caskroom --appdir=$HOME/Applications"' >>~/.bashrc
     - . ~/.bashrc
-    - brew cask install xquartz
+    - brew cask reinstall xquartz
     - brew install wine mono
     - brew install npm
     - npm install -g npm@5.4.1
