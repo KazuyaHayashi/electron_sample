@@ -11,7 +11,7 @@ machine:
     XCODE_PROJECT: test
 
   xcode:
-    version: 8.3
+    version: 7.0
 
 dependencies:
   pre:
@@ -29,7 +29,7 @@ dependencies:
     - . ~/.bashrc
     - brew cask reinstall xquartz
     - brew install wine mono
-    - brew install npm
+    - brew upgrade npm
     - npm install -g npm@5.4.1
 
   cache_directories:
@@ -37,7 +37,7 @@ dependencies:
 
 test:
   override:
-    - npm run build:
+      - npm run build:win:
         timeout: 600
   post:
     - mv dist $CIRCLE_ARTIFACTS
