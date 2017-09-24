@@ -11,7 +11,7 @@ machine:
     XCODE_PROJECT: test
 
   xcode:
-    version: 8.3
+    version: 7.3
 
 dependencies:
   pre:
