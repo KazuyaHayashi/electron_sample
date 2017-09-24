@@ -27,16 +27,16 @@ dependencies:
     - echo 'export PATH=$HOME/.homebrew/bin:$HOME/.awscli/bin:$PATH' >>~/.bashrc
     - echo 'export HOMEBREW_CASK_OPTS="--caskroom=$HOME/.homebrew/Caskroom --appdir=$HOME/Applications"' >>~/.bashrc
     - . ~/.bashrc
-    - |
-      brew install npm
-      npm install -g npm@5.4.1
+    - brew install wine mono
+    - brew install npm
+    - npm install -g npm@5.4.1
 
   cache_directories:
     - ~/.homebrew
 
 test:
   override:
-    - npm run build_osx:
+    - npm run build:
         timeout: 600
   post:
     - mv dist $CIRCLE_ARTIFACTS
