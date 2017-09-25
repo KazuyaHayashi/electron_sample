@@ -37,7 +37,6 @@ dependencies:
 
 test:
   override:
-    - npm run build:win:
-        timeout: 3600
+    - DEBUG=electron-packager npm run pack:win:
   post:
     - mv dist $CIRCLE_ARTIFACTS
