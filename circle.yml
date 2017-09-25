@@ -37,7 +37,7 @@ dependencies:
 
 test:
   override:
-      - npm run build:win:
+    - npm run build:win:
         timeout: 3600
   post:
     - mv dist $CIRCLE_ARTIFACTS
