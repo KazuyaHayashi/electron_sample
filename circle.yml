@@ -28,7 +28,7 @@ dependencies:
     - echo 'export HOMEBREW_CASK_OPTS="--caskroom=$HOME/.homebrew/Caskroom --appdir=$HOME/Applications"' >>~/.bashrc
     - . ~/.bashrc
     - brew cask reinstall xquartz
-    - brew install wine mono
+    - brew install wine mono winetricks
     - brew upgrade npm
     - npm install -g npm@5.4.1
 
