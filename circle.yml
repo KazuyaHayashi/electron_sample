@@ -9,6 +9,8 @@ machine:
     XCODE_SCHEME: test
     XCODE_WORKSPACE: test
     XCODE_PROJECT: test
+    WINEDLLOVERRIDES: mscoree,mshtml=
+    WINEDEBUG: -all
 
   xcode:
     version: 7.0
