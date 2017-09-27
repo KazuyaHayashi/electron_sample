@@ -9,8 +9,7 @@ machine:
     XCODE_SCHEME: test
     XCODE_WORKSPACE: test
     XCODE_PROJECT: test
-    WINEDLLOVERRIDES: mscoree,mshtml=
-    WINEDEBUG: -all
+    WINEDLLOVERRIDES: mscoree=d;mshtml=d
 
   xcode:
     version: 7.0
@@ -30,7 +29,7 @@ dependencies:
     - echo 'export HOMEBREW_CASK_OPTS="--caskroom=$HOME/.homebrew/Caskroom --appdir=$HOME/Applications"' >>~/.bashrc
     - . ~/.bashrc
     - brew cask reinstall xquartz
-    - brew install wine mono winetricks
+    - brew install wine mono
     - brew upgrade npm
     - npm install -g npm@5.4.1
 
