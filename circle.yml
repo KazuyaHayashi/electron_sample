@@ -1,6 +1,7 @@
 general:
   branches:
     only:
+      - master
       - circleci_macOS
       - /feature.*/
 
@@ -36,9 +37,15 @@ dependencies:
   cache_directories:
     - ~/.homebrew
 
-test:
-  override:
-    - DEBUG=electron-packager npm run pack:win:
-        timeout: 1200
-  post:
-    - mv dist $CIRCLE_ARTIFACTS
+deployment:
+    production:
+        branch: master
+        commands:
+            - npm run build:win
+            - mv dist $CIRCLE_ARTIFACTS
+    staging:
+        branch: circleci_macOS
+        commands:
+            - npm run build:osx
+            - mv dist $CIRCLE_ARTIFACTS
+
